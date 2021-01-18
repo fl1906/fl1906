@@ -1,12 +1,12 @@
-/*閺嶅嘲绱￠崚婵嗩潗閸栵拷*/
+
 *{margin:0;padding: 0;}
 a{text-decoration: none;color: #000;}
-img {border: 0; vertical-align:middle;} 
+img {border: 0; vertical-align:middle;}
 ul li{list-style: none;}
 body,h1,h2,h3,h4,h5,h6{font: 12px 鐎瑰缍�,Times New Roman;}
-body{background: rgb(20,33,42)  }
+body{background: rgba(36, 42, 20, 0.87)
+}
 
-/*妫板嫬鐣炬稊澶嬬壉瀵拷*/
 .w{width: 1000px;margin: 0 auto;}
 .fl{float: left;}
 .fr{float: right;}
@@ -18,11 +18,11 @@ table{width: 360px;height: 240px;border:none;margin: 0 auto;}
 tr,th,td{height: 20px;}
 th{width: 60px;}
 input:focus{border: 2px solid orange;}
-/*閻€劍鍩涢惂璇茬秿*/
+
 .top{width: 100%;height: 100px;background: #fff;}
 .top .logo{width: 1130px;height: 100px;}
-.form{width: 1130px;height:588px;background: url('../image/register.jpg')no-repeat center center; }
-.login{width: 400px;height: 470px;/*border:1px solid #ff6700;*/margin:30px auto;background: #444;color:#fff;margin-right: 0px;border-radius: 4px;}
+.form{width: 1130px;height:588px;background: url('../image/login_bg.jpg')no-repeat center center; }
+.login{width: 400px;height: 470px;/*border:1px solid #ff6700;*/margin:30px auto;background: #444444;color:#fff;margin-right: 0px;border-radius: 4px;}
 .login .login_center{width: 360px;margin: 10px auto;}
 .login .login_top{margin: 10px 0;}
 .login .login_top .left{height: 40px;line-height: 40px;font-weight: bold;font-size: 20px;}
@@ -39,13 +39,13 @@ input:focus{border: 2px solid orange;}
 .login_main .username .yanzhengma:focus{border: 1px solid blue;background: #F0FFFF;}
 .login_main .username .right{margin-left: 20px;}
 
-/*鐠佸墽鐤嗛幐澶愭尦閺嶅嘲绱�*/
+
 .login .login_center .login_submit{margin: 15px auto;}
-.login .login_center .submit{border:none;width: 240px;height: 45px;margin-left:55px;background: #ff6700;color: #fff; font-size: 20px;font-weight: bold;letter-spacing: 2px;cursor:pointer;border-radius: 4px;}
+.login .login_center .submit{border:none;width: 240px;height: 45px;margin-left:55px;background: rgba(76, 255, 0, 0.76);color:greenyellow; font-size: 20px;font-weight: bold;letter-spacing: 2px;cursor:pointer;border-radius: 4px;}
 .login .login_center .submit:hover{border:1px solid #fff;}
 
 
-/*閻€劍鍩涘▔銊ュ斀*/
+
 .regist{width: 1000px;height: 550px;margin:20px auto;background:#fff;color:#000;border-radius: 6px;}
 .regist_center{width: 870px;margin: 10px auto;}
 .regist .regist_top{margin: 20px 0;}

@@ -25,7 +25,7 @@ public class EmailUtils {
 		//发送方
 		String myAccount = "1906249647@qq.com";
 		//授权码
-		String myPass = "mxkbbiwlymhxbdci";
+		String myPass = "rxwhbqssbcmbbfad";
 		//发件人 邮箱的 SMTP 服务器地址
 		String SMTPHost = "smtp.qq.com";
 		//组成 properties

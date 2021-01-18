@@ -2,7 +2,6 @@ package com;
 
 /**
  * Created with IntelliJ IDEA.
- *
  * @Auther: 风离
  * @Date: 2020/12/15/0:57
  * @Description:
@@ -34,7 +33,7 @@ public class test {
         // 此处填写，写信人的账号
         props.put("mail.user", "1906249647@qq.com");
         // 此处填写16位STMP口令
-        props.put("mail.password", "mxkbbiwlymhxbdci");
+        props.put("mail.password", "rxwhbqssbcmbbfad");
 
         // 构建授权信息，用于进行SMTP进行身份验证
         Authenticator authenticator = new Authenticator() {
@@ -55,7 +54,7 @@ public class test {
         message.setFrom(form);
 
         // 设置收件人的邮箱
-        InternetAddress to = new InternetAddress("@qq.com");
+        InternetAddress to = new InternetAddress("923921824@qq.com");
         message.setRecipient(RecipientType.TO, to);
 
         // 设置邮件标题

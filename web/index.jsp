@@ -14,7 +14,7 @@
 <%@ include file="header.jsp"%>
 <!--网站中间内容开始-->
 <div id="thred">
-      <img src="image/banner2.jpg" width="1230" height="460" /> 
+      <img src="image/login_bg.jpg" width="1230" height="480" />
 </div>
    <div id="forth">
    		<span>
