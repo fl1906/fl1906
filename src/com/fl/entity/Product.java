@@ -97,5 +97,17 @@ public class Product implements Serializable {
         this.p_info = p_info;
     }
 
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "p_id=" + p_id +
+                ", t_id=" + t_id +
+                ", p_name='" + p_name + '\'' +
+                ", p_time=" + p_time +
+                ", p_image='" + p_image + '\'' +
+                ", p_state=" + p_state +
+                ", p_info='" + p_info + '\'' +
+                ", p_price=" + p_price +
+                '}';
+    }
 }

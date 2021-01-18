@@ -70,4 +70,22 @@ public class OrdersServiceImpl implements OrdersService {
       List<Orders> list=ordersDao.selectOrdersByUid(uid);
         return list;
     }
+
+    @Override
+    public Orders findOrdersByOid(String oid) throws IllegalAccessException, SQLException, InvocationTargetException {
+        //根据oid查询订单和订单地址信息
+          OrdersDao ordersDao=new OrdersDaoImpl();
+       Orders orders= ordersDao.selectOrderByOid(oid);
+        //根据oid对应的订单项和商品信息
+      List<Item> items =ordersDao.selectItemsByOid(oid);
+        //订单项集合设置给订单对象
+     orders.setItems(items);
+        return orders;
+    }
+
+    @Override
+    public void updateStateByOid(String oid) throws SQLException {
+         OrdersDao ordersDao=new OrdersDaoImpl();
+         ordersDao.updateStateByOid(oid);
+    }
 }

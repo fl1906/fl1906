@@ -8,9 +8,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
-	function pay(orderId,money){
-		location.href="pay.jsp?oid="+orderId+"&omoney="+money;
-	}
+
 	function payWeiXin(orderId,money){
 		location.href="payWeixin.jsp?oid="+orderId+"&omoney="+money;
 	}
@@ -26,21 +24,21 @@
 
 		<tr>
 			<td>订单编号:</td>
-			<td>${od.order.id}</td>
+			<td>${order.oid}</td>
 			<td>订单时间:</td>
-			<td>${od.order.time}</td>
+			<td>${order.otime}</td>
 		</tr>
 		<tr>
 			<td>收件人:</td>
-			<td>${od.address.name}</td>
+			<td>${order.address.aname}</td>
 			<td>联系电话:</td>
-			<td>${od.address.phone}</td>
+			<td>${order.address.aphone}</td>
 		</tr>
 		<tr>
 			<td>送货地址:</td>
-			<td>${od.address.detail}</td>
+			<td>${order.address.adetail}</td>
 			<td>总价:</td>
-			<td>${od.order.money}</td>
+			<td>${order.ocount}</td>
 		</tr>
 		<tr>
 			<td align="center">商品列表:</td>
@@ -56,18 +54,18 @@
 						<th>购买数量</th>
 						<th>小计</th>
 					</tr>
-					<c:forEach items="${od.list}" var="item" varStatus="i">
+					<c:forEach items="${order.items}" var="item" varStatus="i">
 						<tr align="center">
 							<th>${i.count}</th>
 							<th>
-								<img src="${pageContext.request.contextPath}/goodsImgs/${item.goods.picture}" width="50px" height="50px">
+								<img src="${pageContext.request.contextPath}/${item.product.p_image}" width="50px" height="50px">
 							</th>
-							<th>${item.goods.name}</th>
-							<th>${item.goods.star}</th>
-							<th>${item.goods.pubdate}</th>
-							<th>${item.goods.price}</th>
-							<th>${item.num}</th>
-							<th>${item.money}</th>
+							<th>${item.product.p_name}</th>
+							<th>${item.product.p_state}</th>
+							<th>${item.product.p_time}</th>
+							<th>${item.product.p_price}</th>
+							<th>${item.inum}</th>
+							<th>${item.icount}</th>
 						</tr>
 					</c:forEach>
 				</table>
@@ -75,12 +73,11 @@
 		</tr>
 		<tr>
 			<td align="right" colspan="4" style="margin-right: 40px;">
-				<a href="${pageContext.request.contextPath }/getOrderList" class="btn btn-danger btn-sm">返回订单列表</a>
+				<a href="${pageContext.request.contextPath }/orders?method=show" class="btn btn-danger btn-sm">返回订单列表</a>
 				&nbsp;&nbsp;
-				<c:if test="${od.order.status eq 1 }">
-					<button type="button" onclick="pay('${od.order.id}','${od.order.money}')" class="btn btn-warning btn-sm">易付宝支付</button>
+				<c:if test="${order.ostate eq 1 }">
 						&nbsp;&nbsp;
-					<button type="button" onclick="payWeiXin('${od.order.id}','${od.order.money}')" class="btn btn-success btn-sm">微信支付</button>
+					<button type="button" onclick="payWeiXin('${order.oid}','${order.ocount}')" class="btn btn-success btn-sm">微信支付</button>
 				</c:if>
 			</td>
 		</tr>

@@ -10,7 +10,7 @@
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript">
 	function showOrder(orderId){
-		location.href="${pageContext.request.contextPath}/getOrderDetail?oid="+orderId;
+		location.href="${pageContext.request.contextPath}orders?method=detail&oid="+orderId;
 	}
 	function changeStatus(orderId){
 		location.href="${pageContext.request.contextPath}/changeStatus?oid="+orderId;

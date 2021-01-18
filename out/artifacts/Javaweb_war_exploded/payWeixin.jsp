@@ -24,22 +24,22 @@
 					<table class="table table-bordered table-striped table-hover">
 						<tr>
 							<td colspan="1">订单号:</td>
-							<td colspan="3"><input type="text" class="form-control" name="orderId" value="<%=request.getParameter("oid")%>" readonly="readonly"></td>
+							<td colspan="3"><input type="text" class="form-control" name="orderId" value="${param.oid}" readonly="readonly"></td>
 						</tr>
 						<tr>
 							<td colspan="1">支付金额:</td>
 							<td colspan="3">
 								<div class="input-group" style="width: 200px;">
-							      <input type="text" class="form-control"  name="price" value="<%=request.getParameter("omoney")%>">
+							      <input type="text" class="form-control"  name="price" value="${param.omoney}">
 							      <div class="input-group-addon"><span class="glyphicon glyphicon-yen"></span></div>
 						      	</div>
 							</td>
 						</tr>
 						<tr>
-							<td colspan="1">商品介绍:</td>
+							<td colspan="1">订单介绍:</td>
 							<td colspan="3"><input type="text" class="form-control" name="body" value="xiaomi" readonly="readonly">
 							<!-- 设置 程序回传到的链接地址 -->
-							<input type="hidden" class="form-control" name="url" value="http://localhost:8080/paySuccess">
+							<input type="hidden" class="form-control" name="url" value="http://localhost:8080/orders?method=success&oid="+${param.oid}>
 							</td>
 						</tr>
 						

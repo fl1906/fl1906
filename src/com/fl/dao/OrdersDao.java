@@ -20,4 +20,12 @@ public interface OrdersDao {
     void insertItems(List<Item> items) throws SQLException;
 
     List<Orders> selectOrdersByUid(int uid) throws SQLException, InvocationTargetException, IllegalAccessException;
+
+  
+
+    Orders selectOrderByOid(String oid) throws SQLException, InvocationTargetException, IllegalAccessException;
+
+    List<Item> selectItemsByOid(String oid) throws SQLException, InvocationTargetException, IllegalAccessException;
+
+    void updateStateByOid(String oid) throws SQLException;
 }

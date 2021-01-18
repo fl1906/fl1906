@@ -26,10 +26,7 @@ import java.util.List;
 public class test {
     public static void main(String[] args) throws IllegalAccessException, SQLException, InvocationTargetException {
         OrdersDao ordersDao=new OrdersDaoImpl();
-     List<Orders> list=ordersDao.selectOrdersByUid(3);
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
-        }
+       ordersDao.selectItemsByOid("20210118011038829");
 
 
     }

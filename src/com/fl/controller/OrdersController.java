@@ -1,9 +1,6 @@
 package com.fl.controller;
 
-import com.fl.entity.Address;
-import com.fl.entity.Cart;
-import com.fl.entity.Orders;
-import com.fl.entity.User;
+import com.fl.entity.*;
 import com.fl.service.AddressService;
 import com.fl.service.CartService;
 import com.fl.service.OrdersService;
@@ -11,6 +8,7 @@ import com.fl.service.impl.AddressServiceImpl;
 import com.fl.service.impl.CartServiceImpl;
 import com.fl.service.impl.OrdersServiceImpl;
 import com.fl.utils.Constants;
+import com.google.gson.Gson;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -68,7 +66,41 @@ public class OrdersController extends BaseServlet{
       List<Orders> ordersList=ordersService.findOrdersByUid(user.getUid());
       request.setAttribute("ordersList",ordersList);
       return Constants.FORWARD+"/orderList.jsp";
+    }
+    public String detail(HttpServletRequest request,HttpServletResponse response) throws IllegalAccessException, SQLException, InvocationTargetException {
+      String oid=request.getParameter("oid");
+      OrdersService ordersService=new OrdersServiceImpl();
+      Orders orders=ordersService.findOrdersByOid(oid);
+        request.setAttribute("order",orders);
 
+        return Constants.FORWARD+"/orderDetail.jsp";
+    }
+    public String success(HttpServletRequest request,HttpServletResponse response) throws SQLException {
+        //1.获取请求参数
+        String oid = request.getParameter("oid");
+        String result = request.getParameter("result");
+
+        Gson gson = new Gson();
+        WeiXin weiXin = gson.fromJson(result, WeiXin.class);
+
+        String result_code = weiXin.getResult().getResult_code();
+
+        if (result_code != null && result_code.equals("SUCCESS"))
+        {
+            //支付成功
+            //修改状态
+            //订单列表页面
+            OrdersService ordersService = new OrdersServiceImpl();
+            ordersService.updateStateByOid(oid);
+
+            return Constants.FORWARD + "/order?method=show";
+        }else{
+            //支付失败
+            HttpSession session = request.getSession();
+            session.setAttribute("msg", "订单："+oid+" 支付失败！");
+            //message.jsp页面
+            return Constants.REDIRECT + "/message.jsp";
+        }
     }
 
 }
