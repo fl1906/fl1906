@@ -47,6 +47,9 @@ public class BaseServlet extends HttpServlet {
             }
         } catch (Exception e) {
             e.printStackTrace();
+           //异常统一处理的地方
+            req.setAttribute("msg","程序异常了哟~~");
+            resp.sendRedirect("/msg.jsp");
         }
     }
     public String index(HttpServletRequest req,HttpServletResponse resp){
