@@ -2,7 +2,6 @@
 	pageEncoding="utf-8"%>
 <!--网站版权部分开始-->
  <div id="seventh">
-    	<p id="sevep">小米商城|MIUI|米聊|多看书城|小米路由器|视频电话|小米天猫店|小米淘宝直营店|小米网盟|小米移动|隐私政策|Select Region</p>
-        <p id="sevep">©mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2014]0059-0009号</p>
-        <p id="sevep"><font color="#ff4500 " size="6">                     By  风离                        </font> </p>
+     <div class="copyright">简体 | 繁体 | English | 常见问题</div>
+     <div class="copyright"><a href="${pageContext.request.contextPath }/index.jsp" target="_blank"><font color="#ff4500" size="6">Created By 风离</font></a></div>
  </div>

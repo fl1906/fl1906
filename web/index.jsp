@@ -6,62 +6,48 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="css/login2.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
-<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
 
 <title>小米商城首页</title>
 </head>
 <body>
+
 <%@ include file="header.jsp"%>
 <!--网站中间内容开始-->
 <div id="thred">
-      <img src="image/login_bg.jpg" width="1230" height="480" />
+    <img src="image/login_bg.jpg" width="1230" height="450" />
 </div>
+
    <div id="forth">
-   		<span>
-        	<a href=""><img src="image/hjh_01.gif" /></a>
-            <a href=""><img src="image/hjh_02.gif" /></a>
-            <a href=""><img src="image/hjh_03.gif" /></a>
-            <a href=""><img src="image/hjh_04.gif" /></a>
-            <a href=""><img src="image/hjh_05.gif" /></a>
-            <a href=""><img src="image/hjh_06.gif" /></a>
-        </span>
-        <a href="" id="a_left"><img src="image/hongmi4x.png" width="316" height="170" /></a>
-        <a href="" id="a_left"><img src="image/xiaomi5.jpg" width="316" height="170" /></a>
-    	<a href="" id="a_left"><img src="image/pinghengche.jpg" width="316" height="170" /></a>
+        <a href="" id="a_left"><img src="image/down.jpg" width="170" height="170" /></a>
+        <a href="" id="a_left"><img src="image/sj01.png" width="332" height="170" /></a>
+        <a href="" id="a_left"><img src="image/sj02.png" width="332" height="170" /></a>
+    	<a href="" id="a_left"><img src="image/sj03.png" width="332" height="170" /></a>
    </div>
    <div id="fifth">
-   		<span id="fif_text">小米明星单品</span>
+   		<span id="fif_text">小米最新商品</span>
    </div>
     <div id="sixth">
             <span style="margin-left:0px; border-top:#ffa500 1px solid">
-            	<a href="" id="siximg"><img src="image/pinpai1.png" width="234" height="234" /></a>
-            	<a href="" id="na">小米MIX</a>
-                <p id="chip">5月9日-21日享花呗12期分期免息</p>
-                <p id="pri">3499元起</p>
+            	<img src="image/1.png" width="218" height="260" />
             </span>
             <span style=" border-top:#008000 1px solid">
-            	<a href="" id="siximg"><img src="image/pinpai2.png" width="234" height="234" /></a>
-                <a href="" id="na">小米MIX</a>
-                <p id="chip">5月9日-21日享花呗12期分期免息</p>
-                <p id="pri">3499元起</p>
+            	<img src="image/2.png" width="218" height="260" />
+
+
             </span>
             <span style="border-top:#0000ff 1px solid">
-            	<a href="" id="siximg"><img src="image/pinpai3.png" width="234" height="234" /></a>
-                <a href="" id="na">小米MIX</a>
-                <p id="chip">5月9日-21日享花呗12期分期免息</p>
-                <p id="pri">3499元起</p>
+            	<img src="image/3.png" width="218" height="260" />
+
+
             </span>
             <span style="border-top:#ff0000 1px solid">
-            	<a href="" id="siximg"><img src="image/pinpai4.png" width="234" height="234" /></a>
-                <a href="" id="na">小米MIX</a>
-                <p id="chip">5月9日-21日享花呗12期分期免息</p>
-                <p id="pri">3499元起</p>
+            <img src="image/4.png" width="218" height="260" />
+
+
             </span>
             <span style="border-top:#008080 1px solid">
-            	<a href="" id="siximg"><img src="image/pinpai5.png" width="234" height="234" /></a>
-                <a href="" id="na">小米MIX</a>
-                <p id="chip">5月9日-21日享花呗12期分期免息</p>
-                <p id="pri">3499元起</p>
+            <img src="image/6.png" width="218" height="260" />
             </span>
     </div>
    <!-- 底部 -->

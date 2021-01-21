@@ -2,6 +2,7 @@
 	pageEncoding="utf-8"%>
 <html>
 <head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,13 +28,15 @@
 </script>
 <title>注册</title>
 </head>
-<body>
-	<div class="regist">
+<body >
+
+
+<div class="regist" id="flRegister">
 		<div class="regist_center">
 			<div class="regist_top">
-				<div class="left fl"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;会员注册</div>
-				<div class="right fr">
-					<a href="index.jsp" target="_black">小米商城</a>
+				<a class="left fl" href="${pageContext.request.contextPath }/login.jsp"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;会员注册</a></div>
+				<div class="right fr" >
+					<a href="index.jsp" target="_blank"><font size="5" color="orange"> 小米商城</font></a>
 				</div>
 				<div class="clear"></div>
 				<div class="xian center"></div>
@@ -79,7 +82,7 @@
 								placeholder="Email" />
 						</div>
 						<div class="col-sm-2">
-						<p class="text-danger"><span id="helpBlock" class="help-block ">填写正确邮箱格式</span></p>
+						<p class="text-danger"><span id="helpBlock" class="help-block ">请填写正确邮箱格式</span></p>
 						</div>
 					</div>
 					<div class="form-group">
@@ -92,7 +95,7 @@
 							</label>
 						</div>
 						<div class="col-sm-2">
-						<p class="text-danger"><span id="helpBlock" class="help-block ">你是帅哥 还是美女</span></p>
+						<p class="text-danger"><span id="helpBlock" class="help-block ">你是小哥哥 还是小姐姐</span></p>
 						</div>
 					</div>
 					<hr>

@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="referrer" content="no-referrer">
 <title>商品列表页</title>
 
 </head>
 <body>
 	<%@ include file="header.jsp"%>
-
 
 <div class="panel panel-default" style="margin: 0 auto;width: 95%;">
 	<div class="panel-heading">
@@ -21,7 +21,7 @@
 	    	<c:forEach items="${pageBean.list}" var="g" varStatus="i">
 		    	<div class="col-sm-3">
 				    <div class="thumbnail">
-				      <img src="${pageContext.request.contextPath}/${g.p_image}" width="180" height="180"  alt="小米6" />
+				      <img src="${pageContext.request.contextPath}/${g.p_image}" width="190" height="190"  alt="小米6" />
 				      <div class="caption">
 				        <h4>商品名称<a href="${pageContext.request.contextPath}/product?method=detail&pid=${g.p_id}">${g.p_name}</a></h4>
 				        <p>热销指数

@@ -3,6 +3,7 @@
     pageEncoding="utf-8"%>
 <html>
 <head>
+    <meta name="referrer" content="never">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <link rel="stylesheet" type="text/css" href="css/login2.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">

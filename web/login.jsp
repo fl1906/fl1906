@@ -39,7 +39,7 @@
 			//4.两周以内自动登录  友好提示
 			$("#autoLogin").click(function(){
 				if(this.checked){
-					$("#autoLoginMsg").html("公司电脑请勿勾选此项").css("color","red");
+					$("#autoLoginMsg").html("若非自己电脑请勿勾选此项").css("color","red");
 				}else{
 					$("#autoLoginMsg").html("");
 				}
@@ -48,18 +48,18 @@
 	</script>
 </head>
 <body>
-<!-- login -->
+<!-- login
 <div class="top center">
 	<div class="logo center">
 		<a href="${pageContext.request.contextPath }/index.jsp" target="_blank"><img src="./image/mistore_logo.png" alt=""></a>
 	</div>
-</div>
+</div> !-->
 <form  method="post" action="user?method=login" class="form center" id="userLogin" >
 	<div class="login">
 		<div class="login_center">
 			<div class="login_top">
-				<div class="left fl">会员登录</div>
-				<div class="right fr">您还不是我们的会员？<a href="${pageContext.request.contextPath }/register.jsp" target="_self">立即注册</a></div>
+				<div class="left fl">用户登录</div>
+				<div class="right fr">您还不是我们的用户？<a href="${pageContext.request.contextPath }/register.jsp" target="_self">立即注册</a></div>
 				<div class="clear"></div>
 				<div class="xian center"></div>
 			</div>
@@ -100,8 +100,7 @@
 </form>
 <footer>
 	<div class="copyright">简体 | 繁体 | English | 常见问题</div>
-	<div class="copyright">小米公司版权所有-京ICP备10046444-<img src="./image/ghs.png" alt="">京公网安备11010802020134号-京ICP证110507号</div>
-
+    <div class="copyright"><a href="${pageContext.request.contextPath }/index.jsp" target="_blank"><font color="#ff4500" size="6">Created By 风离</font></a></div>
 </footer>
 </body>
 </html>
