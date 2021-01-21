@@ -37,8 +37,13 @@ public class AddressDaoImpl implements AddressDao {
     @Override
     public void deleteAddress(String aid) throws SQLException {
         QueryRunner queryRunner=new QueryRunner(C3P0Utils.getDataSource());
+        String sql1="SET FOREIGN_KEY_CHECKS = 0;";//关闭外键检查
+        String sql2="SET FOREIGN_KEY_CHECKS = 1;";//开启外键检查
+        queryRunner.update(sql1);
         String sql="delete from address where a_id=?";
         queryRunner.update(sql,aid);
+        queryRunner.update(sql2);
+
     }
 
     @Override

@@ -24,7 +24,7 @@ public class ProductController extends BaseServlet{
         //1.接受请求参数 tid 类别 id
         String tid= request.getParameter("tid");
 
-        int pageSize=6;
+        int pageSize=8;
         String currentPage=request.getParameter("currentPage");
         int page=1;
         if (currentPage != null) {
